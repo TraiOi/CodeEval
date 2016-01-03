@@ -1,6 +1,6 @@
 # My CodeEval Solutions:
 
- * [Easy](https://github.com/TraiOi/CodeEval/tree/master/Easy#easy) (4/77)
+ * [Easy](https://github.com/TraiOi/CodeEval/tree/master/Easy#easy) (6/77)
  * Medium
  * Hard
 
