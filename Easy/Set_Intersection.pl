@@ -14,7 +14,6 @@ sub setIntersection {
 }
 
 sub main {
-  my $sum = 0;
   open(FILE, "<", $_[0]) or die "[-] Cannot open file $_[0] for reading: $!\n.";
   while (my $line = <FILE>) {
     next if $line =~ m/^\s$/;
