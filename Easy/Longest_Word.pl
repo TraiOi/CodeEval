@@ -21,6 +21,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     print longestWord($line); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

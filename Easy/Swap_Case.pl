@@ -17,7 +17,6 @@ sub swapCase {
 }
 
 sub main {
-  my $sum = 0;
   open(FILE, "<", $_[0]) or die "[-] Cannot open file $_[0] for reading: $!\n.";
   while (my $line = <FILE>) {
     next if $line =~ m/^\s$/;
@@ -25,6 +24,8 @@ sub main {
     my @words = split("", $line);
     print swapCase(@words); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

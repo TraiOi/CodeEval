@@ -15,6 +15,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     print lowerCase($line); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

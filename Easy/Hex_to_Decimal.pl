@@ -12,6 +12,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     print hex($line)."\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

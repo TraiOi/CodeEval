@@ -4,19 +4,23 @@ use 5.14.2;
 use warnings;
 use strict;
 
-sub rightmostChar {
-  my $string = $_[0];
-  my $char = $_[1];
-  return rindex($string, $char);
-}
+sub swapNumbers {
+  my @lines = split(" ", $_[0]);
+  foreach my $word (@lines) {
+  my ($num1, $num2) = $word =~ m/(\d)\w+(\d)/;
+  $word =~ s/^\d/$num2/;
+  $word =~ s/\d$/$num1/;
+  }
 
+  return join(" ", @lines);
+}
+ 
 sub main {
   open(FILE, "<", $_[0]) or die "[-] Cannot open file $_[0] for reading: $!\n.";
   while (my $line = <FILE>) {
     next if $line =~ m/^\s$/;
     $line =~ s/(^\s|\s*$)//g;
-    my @string = split(",", $line);
-    print rightmostChar($string[0], $string[1]); print "\n";
+    print swapNumbers($line); print "\n";
   }
 
   close(FILE);

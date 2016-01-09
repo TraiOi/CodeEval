@@ -23,6 +23,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     print fibonacciSeries($line); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

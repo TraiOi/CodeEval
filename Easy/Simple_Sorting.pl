@@ -16,6 +16,8 @@ sub main {
     my @num = split(" ", $line);
     print simpleSorting(@num); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

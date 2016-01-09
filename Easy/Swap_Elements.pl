@@ -23,6 +23,7 @@ sub main {
     my @input = split(":", $line);
     print swapElements($input[0], $input[1]); print "\n";
   }
+  close(FILE);
 }
 
 unless (caller) {

@@ -4,19 +4,20 @@ use 5.14.2;
 use warnings;
 use strict;
 
-sub rightmostChar {
-  my $string = $_[0];
-  my $char = $_[1];
-  return rindex($string, $char);
-}
+sub trickOrTreat {
+  my $candies = $_[3]*($_[0]*3 + $_[1]*4 + $_[2]*5);
+  my $children = $_[0] + $_[1] + $_[2];
 
+  return int($candies/$children);
+}
+ 
 sub main {
   open(FILE, "<", $_[0]) or die "[-] Cannot open file $_[0] for reading: $!\n.";
   while (my $line = <FILE>) {
     next if $line =~ m/^\s$/;
     $line =~ s/(^\s|\s*$)//g;
-    my @string = split(",", $line);
-    print rightmostChar($string[0], $string[1]); print "\n";
+    $line =~ m/Vampires: (\d+), Zombies: (\d+), Witches: (\d+), Houses: (\d+)/;
+    print trickOrTreat($1, $2, $3, $4); print "\n";
   }
 
   close(FILE);

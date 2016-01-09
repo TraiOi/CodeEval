@@ -13,6 +13,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     $sum += $line;
   }; print $sum;
+
+  close(FILE);
 }
 
 unless (caller) {

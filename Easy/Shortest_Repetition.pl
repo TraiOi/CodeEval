@@ -4,19 +4,22 @@ use 5.14.2;
 use warnings;
 use strict;
 
-sub rightmostChar {
+sub shortRepetition {
   my $string = $_[0];
-  my $char = $_[1];
-  return rindex($string, $char);
+  my $substr = "";
+  for(my $i=0; $i<=length($string); $i++) {
+    $substr = substr($string, 0, $i);
+    my @result = split($substr, $string);
+    return length($substr) if (!@result);
+  }
 }
-
+ 
 sub main {
   open(FILE, "<", $_[0]) or die "[-] Cannot open file $_[0] for reading: $!\n.";
   while (my $line = <FILE>) {
     next if $line =~ m/^\s$/;
     $line =~ s/(^\s|\s*$)//g;
-    my @string = split(",", $line);
-    print rightmostChar($string[0], $string[1]); print "\n";
+    print shortRepetition($line); print "\n";
   }
 
   close(FILE);

@@ -20,6 +20,8 @@ sub main {
     $line =~ s/(^\s|\s*$)//g;
     print capitalizeWords($line); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

@@ -21,6 +21,8 @@ sub main {
     my @digits = split("", $line);
     print sumOfDigits(@digits); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

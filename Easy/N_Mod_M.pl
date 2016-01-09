@@ -16,6 +16,8 @@ sub main {
     my @num = split(",", $line);
     print nModM($num[0], $num[1]); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

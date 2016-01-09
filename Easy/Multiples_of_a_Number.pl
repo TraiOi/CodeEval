@@ -22,6 +22,7 @@ sub main {
     my @num = split(",", $line);
     print multiplesOfANumber($num[0], $num[1]); print "\n";
   }
+  close(FILE);
 }
 
 unless (caller) {

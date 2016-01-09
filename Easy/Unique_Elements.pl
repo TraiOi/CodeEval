@@ -22,6 +22,8 @@ sub main {
     my @num = split(",", $line);
     print uniqueElements(@num); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

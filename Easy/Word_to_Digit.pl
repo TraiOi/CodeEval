@@ -39,6 +39,8 @@ sub main {
     my @numbers = split(";", $line);
     print wordToDigit(@numbers); print "\n";
   }
+
+  close(FILE);
 }
 
 unless (caller) {

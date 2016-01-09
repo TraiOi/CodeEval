@@ -4,15 +4,15 @@ use 5.14.2;
 use warnings;
 use strict;
 
-sub findAWriter {
-  my @text = split("", $_[0]);
-  my @index = split(" ", $_[1]);
+sub multiplyLists {
+  my @list_1 = split(" ", $_[0]);
+  my @list_2 = split(" ", $_[1]);
   my @result = ();
-  foreach my $num (@index) {
-    push(@result, $text[$num-1]);
+  for(my $i=0; $i<scalar(@list_1); $i++) {
+    push(@result, $list_1[$i]*$list_2[$i]);
   }
 
-  return join("", @result);
+  return join(" ", @result);
 }
  
 sub main {
@@ -21,7 +21,7 @@ sub main {
     next if $line =~ m/^\s$/;
     $line =~ s/(^\s|\s*$)//g;
     my @input = split(/\|/, $line);
-    print findAWriter($input[0], $input[1]); print "\n";
+    print multiplyLists($input[0], $input[1]); print "\n";
   }
 
   close(FILE);

@@ -31,6 +31,8 @@ sub main {
     }
   }
   print $num;
+
+  close(FILE);
 }
 
 unless (caller) {
