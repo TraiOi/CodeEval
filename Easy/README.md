@@ -43,3 +43,4 @@
  * [x] [Black card](https://github.com/TraiOi/CodeEval/blob/master/Easy/Black_card.pl)
  * [x] [Trick or Treat](https://github.com/TraiOi/CodeEval/blob/master/Easy/Trick_or_Treat.pl)
  * [x] [Penultimate Word](https://github.com/TraiOi/CodeEval/blob/master/Easy/Penultimate_Word.pl)
+ * [x] [Bit Positions](https://github.com/TraiOi/CodeEval/blob/master/Easy/Bit_positions.pl)
